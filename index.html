@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CI/CD Assignment | FA23-BCT-047</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #243b64;
+        }
+
+        button {
+            background-color: #243b64;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 65%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .result {
+            color: #187a45;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="main-heading">
+            CI/CD Assignment - FA23-BCT-047
+        </h1>
+
+        <h2>Zojaja Naveed</h2>
+
+        <p id="roll-number">
+            Roll Number: FA23-BCT-047
+        </p>
+
+        <hr>
+
+        <h3>Button Interaction Test</h3>
+
+        <button id="message-button" onclick="showMessage()">
+            Click Me
+        </button>
+
+        <p id="button-message" class="result"></p>
+
+        <hr>
+
+        <h3>Text Input Test</h3>
+
+        <input
+            type="text"
+            id="user-input"
+            placeholder="Enter your message"
+        >
+
+        <button id="submit-button" onclick="submitText()">
+            Submit
+        </button>
+
+        <p id="submitted-text" class="result"></p>
+
+    </div>
+
+    <script>
+
+        function showMessage() {
+            document.getElementById("button-message").innerText =
+                "Hello! Button clicked successfully!";
+        }
+
+        function submitText() {
+            const input = document.getElementById("user-input").value;
+
+            document.getElementById("submitted-text").innerText =
+                "You entered: " + input;
+        }
+
+    </script>
+
+</body>
+</html>
